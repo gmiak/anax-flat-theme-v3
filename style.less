@@ -1,0 +1,133 @@
+/**
+* Anax Flat theme.
+*/
+@import url(modules.less);
+
+
+/** --------------------------------------------------------------
+ *  header
+ */
+.site-header {
+  height: 90px;
+}
+
+.site-logo-text, .navbar2, .profile {
+  float: left;
+  width: 30%;
+}
+.site-logo-text {
+    font-size: 1.5em;
+    a {
+        text-decoration: none;
+        color: green;
+    }
+}
+.site-logo-text:hover {
+  text-shadow: 1px 1px 1px ;
+}
+
+//navbar style
+.rm-desktop li {
+  background-color: #eee;
+  color: green;
+}
+.rm-desktop li:hover {
+  color: white;
+  background-color: green;
+}
+
+//navbar max
+.rm-max .rm-small .rm-button {
+  font-size: 1.5em
+}
+
+/** --------------------------------------------------------------
+ *  Logo images
+ */
+.logo-1 {
+    position: absolute;
+    top: 70px;
+    left: -140px;
+}
+
+.site-logo-text-icon {
+    img {
+        vertical-align: bottom;
+    }
+}
+
+
+/** --------------------------------------------------------------
+ *  by line
+ */
+
+.byline {
+  width: 700px;
+  border: 1px solid green;
+  margin: 10px; padding: 10px;
+}
+
+
+/** --------------------------------------------------------------
+ *  Link
+ */
+
+a {
+  text-decoration: none;
+}
+a:link {color: #9c9;}
+
+/*visited link */
+a:visited{ color: red;}
+
+a:hover{
+  color: #FED1D1;
+}
+a:active{ color: #00f;}
+
+
+
+
+/** --------------------------------------------------------------
+ *  responsive design
+ */
+ img {
+   max-width: 100%;
+ }
+ @media screen and (max-width: 900px) {
+    .site-logo-text {
+        width: 40%;
+    }
+
+    .navbar2 {
+        width: 50%;
+    }
+
+    .profile {
+        width: 10%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+   .sidebar {
+       //width: 100%;
+       display: none
+   }
+}
+
+@media screen and (max-width: 700px) {
+   .footer-column {
+       width: 100%;
+   }
+}
+
+
+ @media screen and (max-width: 560px) {
+
+   .site-logo-text {
+       width: 90%;
+   }
+    .navbar2 {
+        display: none;
+    }
+}

@@ -1,0 +1,269 @@
+/*
+** Gridbased layout
+*/
+@import url(modules.less);
+@import url(grid-helpers.less);
+
+
+/**
+ * Magic number for vertical rythm
+ * @magicNumber = @fontSizeBody * @lineHeight
+ */
+
+@magicNumber: 24px;
+
+@fontSizeBody:  16px;
+@fontSizeBody:  16px;
+@lineHeight:    (unit(@magicNumber) / unit(@fontSizeBody));
+
+/**
+ * Default font-families
+ */
+@fontFamilyHeadings:  @fontFamilyCambria;
+@fontFamilyBody:      @fontFamilyCalibri;
+@fontFamilyCode:      @fontFamilyCourier;
+
+
+
+
+.inner-wrap {
+  .grid(900px);
+  //.showGrid(900px);
+}
+
+
+.row {
+  .row();
+}
+
+.outer-wrap-header,
+.outer-wrap-main,
+.footer-column-wrapper {
+  margin-bottom: @magicNumber;
+}
+
+.footer-column-wrapper {
+  .clearfix();
+}
+
+.logo-1 {
+  position: absolute;
+  left: -150px;
+  top: 100px;
+}
+.flash-wrap img {
+  .column(12);
+}
+
+.site-logo-text {
+  .column(2);
+
+}
+
+
+.navbar2 {
+  .column(10);
+  font-size: 0.7em
+}
+
+.main {
+  .column(10);
+  .push();
+}
+
+.footer-column {
+  .column(4);
+}
+
+.site-footer {
+  .column(12);
+  text-align: center;
+}
+
+
+
+/** --------------------------------------------------------------
+ *  grid-page
+ */
+
+ .route-grid {
+   .showGrid(900px);
+ }
+
+ .route-grid .main {
+   background-color: green;
+   opacity: 0.5
+ }
+
+
+ .route-grid .footer-column {
+   background-color: brown;
+   opacity: 0.5;
+ }
+
+ .route-grid .site-footer {
+   background-color: blue;
+   opacity: 0.5;
+   color : white;
+   text-align: center;
+   a {
+     color: yellow;
+
+   }
+ }
+
+/** ------------------------------------------------------------------
+* Typografi
+*/
+
+.inner-wrap {
+  .font();
+  .typographyHeadings();
+  .typographyTextElements();
+  .typographyCodeElements();
+  .typographyListElements();
+  .typographyTableElements();
+  .typographyOtherElements();
+}
+
+.route-typografi .inner-wrap {
+  background-image: url(../img/horisontal-grid-24.png);
+}
+
+/** ------------------------------------------------------
+ * Regions, basics to show off the regions.
+ */
+.wrap-all {
+    margin: 0 auto;
+    max-width: 950px;
+}
+
+
+.next-previous {
+    .next,
+    .previous {
+        width: 50%;
+    }
+
+    .next {
+        float: right;
+        text-align: right;
+    }
+}
+
+.breadcrumb {
+    margin-bottom: 22px;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    li {
+        display: inline;
+
+        &::after {
+            content: " » ";
+        }
+    }
+}
+
+.site-header {
+    position: relative;
+}
+
+
+/** --------------------------------------------------------------
+ *  header
+ */
+.site-header {
+  height: 90px;
+}
+
+.site-logo-text {
+  float: left;
+  width: 30%;
+}
+.navbar2, {
+  float: left;
+  width: 40%;
+}
+
+.site-logo-text {
+    font-size: 1.5em;
+    a {
+        text-decoration: none;
+        color: green;
+    }
+}
+.site-logo-text:hover {
+  text-shadow: 1px 1px 1px ;
+}
+
+//navbar style
+.rm-desktop li {
+  background-color: #eee;
+  color: green;
+}
+.rm-desktop li:hover {
+  color: white;
+  background-color: green;
+}
+
+//navbar max
+.rm-max .rm-small .rm-button {
+  font-size: 1.5em
+}
+
+
+/** --------------------------------------------------------------
+ *  responsive design
+ */
+ img {
+   max-width: 100%;
+ }
+ @media screen and (max-width: 900px) {
+    .site-logo-text {
+        width: 40%;
+    }
+
+    .navbar2 {
+        width: 50%;
+    }
+
+    .profile {
+        width: 10%;
+    }
+}
+
+@media screen and (max-width: 1360px) {
+   .logo-1 {
+       //width: 100%;
+       display: none
+   }
+}
+
+@media screen and (max-width: 700px) {
+   .sidebar, .logo-1 {
+       //width: 100%;
+       display: none
+   }
+}
+
+@media screen and (max-width: 700px) {
+   .footer-column {
+       width: 100%;
+   }
+}
+
+
+ @media screen and (max-width: 560px) {
+
+   .site-logo-text {
+       width: 90%;
+   }
+    .navbar2 {
+        display: none;
+    }
+}
