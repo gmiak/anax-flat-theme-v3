@@ -25,10 +25,21 @@
 
 
 
+html {
+  background-image: url(../img/background2.png);
+  background-repeat: repeat-x center;
+}
+
+body {
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+}
 
 .inner-wrap {
   .grid(900px);
   //.showGrid(900px);
+
+
 }
 
 
@@ -78,7 +89,29 @@
 .site-footer {
   .column(12);
   text-align: center;
+  ul {
+    list-style-type: none;
+  }
+
+
 }
+
+/** --------------------------------------------------------------
+ *  Link
+ */
+
+a {
+  text-decoration: none;
+}
+a:link {color: #9c9;}
+
+/*visited link */
+a:visited{ color: red;}
+
+a:hover{
+  color: #FED1D1;
+}
+a:active{ color: #00f;}
 
 
 
@@ -86,7 +119,7 @@
  *  grid-page
  */
 
- .route-grid {
+ .route-grid  .inner-wrap {
    .showGrid(900px);
  }
 
@@ -179,7 +212,9 @@
  */
 .site-header {
   height: 90px;
+
 }
+
 
 .site-logo-text {
   float: left;
@@ -217,6 +252,21 @@
 }
 
 
+
+/**----------------------------------
+* Auther
+*/
+.inner-wrap ul {
+  list-style: none;
+}
+
+.wrap-all {
+  background-color: white;
+}
+.logo-1 {
+  display: none;
+}
+
 /** --------------------------------------------------------------
  *  responsive design
  */
@@ -243,6 +293,7 @@
        display: none
    }
 }
+
 
 @media screen and (max-width: 700px) {
    .sidebar, .logo-1 {
