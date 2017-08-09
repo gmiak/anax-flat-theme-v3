@@ -36,7 +36,7 @@ body {
 }
 
 .inner-wrap {
-  .grid(900px);
+  .grid(960px);
   //.showGrid(900px);
 
 
@@ -84,6 +84,7 @@ body {
 
 .footer-column {
   .column(4);
+  text-align: justify;
 }
 
 .site-footer {
@@ -95,6 +96,25 @@ body {
 
 
 }
+.outer-wrap-main {
+  .column(12)
+}
+.toc {
+  .column(1);
+}
+.has-sidebar main{
+  .column(10);
+
+}
+main {
+  min-height: 400px;
+}
+.bylineBlock img {
+  float: left;
+  margin-right: 15px;
+}
+
+
 
 /** --------------------------------------------------------------
  *  Link
@@ -122,6 +142,10 @@ a:active{ color: #00f;}
  .route-grid  .inner-wrap {
    .showGrid(900px);
  }
+
+/*.route-analysis-kmom01 .inner-wrap {
+  .showGrid(900px);
+}*/
 
  .route-grid .main {
    background-color: green;
@@ -266,6 +290,164 @@ a:active{ color: #00f;}
 .logo-1 {
   display: none;
 }
+
+/**--------------------------------------
+* specifikationer för alla tema
+*/
+
+//base
+.base-a {
+  background-color: white;
+}
+.base-b {
+  background-color: green;
+}
+.base-c {
+  background-color: red;
+}
+
+
+//light
+.light-a {
+  background-color: white;
+}
+.light-b {
+  background-color: black;
+}
+.light-c {
+  background-color: red;
+}
+
+//color
+.color-a {
+  background-color: rgb(174, 224, 230);
+}
+.color-b {
+  background-color: rgb(183, 238, 244);
+}
+.color-c {
+  background-color: rgb(138, 199, 206);
+}
+.color-d {
+  background-color: green;
+}
+.color-e {
+  background-color: red;
+}
+
+
+//dark
+.dark-a {
+  background-color: black;
+}
+.dark-b {
+  background-color: rgb(53, 50, 50);
+}
+.dark-c {
+  background-color: white;
+}
+
+//colorful
+.colorful-a {
+  background-color: rgb(254, 213, 217);
+}
+.colorful-b {
+  background-color: rgb(255, 171, 2);
+}
+.colorful-c {
+  background-color: rgb(245, 128, 0);
+}
+.colorful-d {
+  background-color: black;
+}
+.colorful-e {
+  background-color: rgb(253, 252, 232);
+}
+
+
+//typo
+.typo-a {
+  background-color: black;
+}
+.typo-b {
+  background-color: white;
+}
+.typo-c {
+  background-color: green;
+}
+
+
+/**--------------------------------------
+* colorscheme
+*/
+
+
+.box {
+  border: 1px solid black;
+  height: 70px;
+  width: 70px;
+  display: inline-block;
+  margin-left: 5px
+}
+
+//Paris-saint-germain
+.paris-a {
+  background-color: rgb(19, 25, 41);
+}
+.paris-b {
+  background-color: white;
+}
+.paris-c {
+  background-color: rgb(230, 230, 230);
+}
+.paris-d {
+  background-color: rgb(255, 44, 84);
+}
+
+
+//cia
+.cia-a {
+  background-color: rgb(67, 90, 132);
+}
+.cia-b {
+  background-color: rgb(23, 46, 83);
+}
+.cia-c {
+  background-color: rgb(255, 255, 255);
+}
+.cia-d {
+  background-color: rgb(214, 222, 234);
+}
+
+//united
+.united-a {
+  background-color: black;
+}
+.united-b {
+  background-color: rgb(227, 19, 36);
+}
+.united-c {
+  background-color: rgb(242, 242, 242);
+}
+.united-d {
+  background-color: rgb(238, 238, 238);
+}
+.united-e {
+  background-color: white;
+}
+
+
+//resto
+.resto-a {
+  background-color: black;
+}
+.resto-b {
+  background-color: white;
+}
+.resto-c {
+  background-color: rgb(164, 98, 0);
+}
+
 
 /** --------------------------------------------------------------
  *  responsive design
